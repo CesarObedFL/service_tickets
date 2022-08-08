@@ -9,7 +9,6 @@ class Login extends Component
 {
     public $email = '';
     public $password = '';
-    public $remember_me = false;
 
     protected $rules = [
         'email' => 'required|email:rfc,dns',
@@ -25,9 +24,9 @@ class Login extends Component
 
     public function login() {
         $credentials = $this->validate();
-        if(auth()->attempt(['email' => $this->email, 'password' => $this->password], $this->remember_me)) {
+        if(auth()->attempt(['email' => $this->email, 'password' => $this->password])) {
             $user = User::where(["email" => $this->email])->first();
-            auth()->login($user, $this->remember_me);
+            auth()->login($user);
             return redirect()->intended('/dashboard');        
         }
         else{

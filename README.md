@@ -26,7 +26,7 @@
 ## _instalación_
 
 1. Clonar este repositorio con el comando `git clone` 
-2. En la terminal correr en comando `composer install`
+2. En la terminal correr el comando `composer install`
 3. Copiar el archivo `.env.example` a `.env` y actualizar las configuraciones, principalmente la base de datos
 4. In your terminal run `php artisan key:generate`
 5. `php artisan migrate --seed` para crear la base de datos y generar los usuarios
