@@ -8,8 +8,6 @@ use App\Http\Livewire\Auth\SignUp;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Billing;
-use App\Http\Livewire\Profile;
-use App\Http\Livewire\Tables;
 
 use App\Http\Livewire\Users\UserProfile;
 use App\Http\Livewire\Users\UserManagement;
@@ -48,7 +46,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/user-management', UserManagement::class)->name('user-management');
 
     Route::get('/billing', Billing::class)->name('billing');
-    Route::get('/profile', Profile::class)->name('profile');
-    Route::get('/tables', Tables::class)->name('tables');
 });
 

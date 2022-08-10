@@ -17,9 +17,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory()->create([
-            'name' => 'admin',
+            'name' => 'César Obed Figueroa Luna',
             'email' => 'sistemas@carbono6.mx',
-            'password' => Hash::make('secret')
+            'password' => Hash::make('secret'),
+            'phone' => '3324533298',
+            'role' => 'admin'
         ]);
     }
 }

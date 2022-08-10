@@ -4,21 +4,18 @@ namespace App\Http\Livewire\Users;
 
 use App\Models\User;
 use Livewire\Component;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class UserProfile extends Component
 {
+    use LivewireAlert;
 
     public User $user;
-    public $showSuccesNotification  = false;
-
-    public $showDemoNotification = false;
     
     protected $rules = [
-        'user.name' => 'max:40|min:3',
-        'user.email' => 'email:rfc,dns',
-        'user.phone' => 'max:10',
-        'user.about' => 'max:200',
-        'user.location' => 'min:3'
+        'user.name' => 'required|max:40|min:3',
+        'user.email' => 'required|email:rfc,dns',
+        'user.phone' => 'required|min:10',
     ];
 
     public function mount() { 
@@ -26,13 +23,9 @@ class UserProfile extends Component
     }
 
     public function save() {
-        if(env('IS_DEMO')) {
-           $this->showDemoNotification = true;
-        } else {
-            $this->validate();
-            $this->user->save();
-            $this->showSuccesNotification = true;
-        }
+        $this->validate();
+        $this->user->save();
+        $this->alert('success', "Your profile was update successfully!...", [ 'position' => 'center', 'timer' => 2500 ]);
     }
 
     public function render()
