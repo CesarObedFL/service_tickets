@@ -16,12 +16,18 @@ the problems that can be registered are open to the needs of the company
 
 # Technologies
 
+<p align="center">
+    <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a>
+    <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
+    <a href="https://mariadb.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="mariadb" width="40" height="40"/> </a> 
+</p>
+
 - [Laravel] - Laravel 9 as backend technology 
 - [Livewire] - Livewire as frontend technology
 - [AlpineJS] - It's used by livewire for _UX_
 - [Bootstrap] - Bootstrap v5 as responsive design framework _UI_
 - [Template] - The _Soft UI Dashboard Laravel Livewire_ design template is implemented in it's free version ([live_demo]) [docs]
-- [MySQL] - as database technology
+- [MariaDB] - as database technology
 
 
 # Install y Requeriments
@@ -51,7 +57,7 @@ the problems that can be registered are open to the needs of the company
 [Laravel]: <https://laravel.com/docs/9.x>
 [Livewire]: <https://laravel-livewire.com/>
 [Bootstrap]: <https://getbootstrap.com/docs/5.0/getting-started/introduction/>
-[MySQL]: <https://dev.mysql.com/doc/>
+[MariaDB]: <https://mariadb.org/>
 
 [AlpineJS]: <https://alpinejs.dev/>
 [JQuery]: <https://jquery.com/>
