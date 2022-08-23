@@ -33,6 +33,14 @@
                         </div>
                     </form>
                 </div>
+                <div class="card-footer">
+                    <div wire:loading wire:target="store">
+                        <div class="d-flex align-items-center ms-5 me-5 mb-3">
+                            <strong>Loading...</strong>
+                            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

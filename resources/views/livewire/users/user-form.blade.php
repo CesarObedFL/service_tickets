@@ -18,13 +18,15 @@
                             </div>
                             @error('email') <div class="text-danger">{{ $message }}</div> @enderror
                         </div>
-                        <div class="mb-3">
-                            <div class="input-group @error('password') border border-danger rounded-3 @enderror">
-                                <span class="input-group-text" role="button" wire:click="show_password">@if( $input_password_type == 'password' ) <i class="fa fa-eye"></i> @else <i class="fa fa-eye-slash"></i> @endif </span>
-                                <input wire:model="password" type="{{ $input_password_type }}" class="form-control ms-1" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                        @if( $mode == 'create' )
+                            <div class="mb-3">
+                                <div class="input-group @error('password') border border-danger rounded-3 @enderror">
+                                    <span class="input-group-text" role="button" wire:click="show_password">@if( $password_input_type == 'password' ) <i class="fa fa-eye"></i> @else <i class="fa fa-eye-slash"></i> @endif </span>
+                                    <input wire:model="password" type="{{ $password_input_type }}" class="form-control ms-1" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                </div>
+                                @error('password') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
-                            @error('password') <div class="text-danger">{{ $message }}</div> @enderror
-                        </div>
+                        @endif
                         <div class="mb-3">
                             <div class="@error('phone') border border-danger rounded-3 @enderror">
                                 <input wire:model="phone" type="number" class="form-control" placeholder="Phone" aria-label="phone" aria-describedby="phone-addon">
@@ -33,12 +35,11 @@
                         </div>
                         <div class="mb-3">
                             <div class="@error('role') border border-danger rounded-3 @enderror">
-                                <!-- <input wire:model="role" type="text" class="form-control" placeholder="Rol" aria-label="role" aria-describedby="role-addon"> -->
-                                <select wire:model="role" class="form-select" aria-label="role" aria-describedby="role-addon">
-                                    <option selected class="font-weight-bolder opacity-7">Pick a role...</option>
-                                    <option @if( $role == 'user' ) selected @endif value="user">User</option>
-                                    <option @if( $role == 'support' ) selected @endif value="support">Support</option>
-                                    <option @if( $role == 'admin' ) selected @endif value="admin">Admin</option>
+                                <select wire:model="role" class="form-control" aria-label="role" aria-describedby="role-addon">
+                                    <option>Pick a role...</option>
+                                    <option value="user">User</option>
+                                    <option value="support">Support</option>
+                                    <option value="admin">Admin</option>
                                 </select>
                             </div>
                             @error('role') <div class="text-danger">{{ $message }}</div> @enderror
@@ -52,6 +53,14 @@
                             </div>
                         </div>
                     </form>
+                </div>
+                <div class="card-footer">
+                    <div wire:loading wire:target="store">
+                        <div class="d-flex align-items-center ms-5 me-5 mb-3">
+                            <strong>Loading...</strong>
+                            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

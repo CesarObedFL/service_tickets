@@ -93,15 +93,12 @@
                                                 <span role="button" data-bs-toggle="tooltip" data-bs-original-title="Edit user" onclick="Livewire.emit('openModal', 'users.user-form', {{ json_encode(['user_id' => $user->id, 'mode' => 'update']) }} )">
                                                     <i class="fas fa-user-edit text-secondary"></i>
                                                 </span>
-                                                @if( $user->status )
-                                                    <span role="button" wire:click="change_status({{ $user->id }})" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Deactivate user">
-                                                        <i class="cursor-pointer fas fa-user-times text-secondary"></i>
-                                                    </span>
-                                                @else
-                                                    <span role="button" wire:click="change_status({{ $user->id }})" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Activate user">
-                                                        <i class="cursor-pointer fas fa-user-check text-secondary"></i>
-                                                    </span>
-                                                @endif
+                                                <span role="button" wire:click="change_status({{ $user->id }})" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="@if( $user->status ) Deactivate user @else Activate user @endif">
+                                                    <i class="cursor-pointer @if( $user->status ) fas fa-user-times @else fas fa-user-check @endif text-secondary"></i>
+                                                </span>
+                                                <a class="mb-0 px-0 py-1" role="button" data-bs-toggle="tooltip" data-bs-original-title="reset password" onclick="Livewire.emit('openModal', 'users.reset-password', {{ json_encode(['user_id' => $user->id]) }} )">
+                                                    <span class="ms-1 fas fa-key text-secondary"></span>
+                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach

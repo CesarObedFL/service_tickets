@@ -11,7 +11,10 @@ use App\Http\Livewire\Billing;
 
 use App\Http\Livewire\Users\UserProfile;
 use App\Http\Livewire\Users\UserManagement;
-use App\Http\Livewire\Ticket;
+
+use App\Http\Livewire\Tickets\TicketList;
+use App\Http\Livewire\Tickets\MyTickets;
+use App\Http\Livewire\Tickets\TicketShow;
 
 use Illuminate\Http\Request;
 
@@ -32,19 +35,19 @@ Route::get('/', function() {
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
-
 Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-password');
-
-Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')->middleware('signed');
+Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password');//->middleware('signed');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', Dashboard::class)->name('dashboard');
-
-    Route::get('/tickets', Ticket::class)->name('tickets');
+    
+    Route::get('/my-tickets', MyTickets::class)->name('my-tickets');
+    Route::get('/ticket-show/{id}', TicketShow::class)->name('ticket-show');
+    Route::get('/ticket-list', TicketList::class)->name('ticket-list')->middleware('admin');
     
     Route::get('/user-profile', UserProfile::class)->name('user-profile');
-    Route::get('/user-management', UserManagement::class)->name('user-management');
+    Route::get('/user-management', UserManagement::class)->name('user-management')->middleware('admin');
 
-    Route::get('/billing', Billing::class)->name('billing');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard')->middleware('admin');
+
 });
 

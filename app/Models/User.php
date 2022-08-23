@@ -54,4 +54,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function my_tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
+
+    public function count_unreaded_notifications()
+    {
+        return $this->hasManyThrough(Notification::class, Ticket::class)->where('is_read', false)->count();
+    }
+
+    public function unreaded_notifications()
+    {
+        return $this->hasManyThrough(Notification::class, Ticket::class)->where('is_read', false)->get();
+    }
 }

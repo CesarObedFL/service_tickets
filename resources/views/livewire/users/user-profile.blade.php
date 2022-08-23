@@ -20,8 +20,8 @@
                     <div class="nav-wrapper position-relative end-0">
                         <ul class="nav nav-fill p-1 bg-transparent">
                             <li class="nav-item">
-                                <a class="mb-0 px-0 py-1" data-bs-toggle="tooltip" data-bs-original-title="go to my tickets" href="javascript:;">
-                                    <span class="ms-1">{{ __('Tickets') }}</span>
+                                <a class="mb-0 px-0 py-1" data-bs-toggle="tooltip" data-bs-original-title="go to my tickets" href="{{ route('my-tickets') }}">
+                                    <span class="ms-1">{{ __('My Tickets') }}</span>
                                 </a>
                             </li>
                             <li class="nav-item">

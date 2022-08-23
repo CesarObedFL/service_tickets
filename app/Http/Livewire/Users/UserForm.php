@@ -16,7 +16,7 @@ class UserForm extends ModalComponent
     public $name;
     public $email;
     public $password;
-    public $input_password_type;
+    public $password_input_type;
     public $phone;
     public $role; // [user | support | admin ]
 
@@ -27,11 +27,10 @@ class UserForm extends ModalComponent
             $this->user_id = $user_id;
             $this->name = $user->name;
             $this->email = $user->email;
-            $this->password = Hash::check('plain-text', $user->password);
             $this->phone = $user->phone;
             $this->role = $user->role;
         }
-        $this->input_password_type = 'password';
+        $this->password_input_type = 'password';
         $this->mode = $mode;
     }
 
@@ -85,7 +84,6 @@ class UserForm extends ModalComponent
         $validated_data = $this->validate([
             'name' => 'required',
             'email' => 'required|email:rfc,dns',
-            'password' => 'required',
             'phone' => 'required|min:10',
             'role' => 'required'
         ]/*, [
@@ -100,7 +98,6 @@ class UserForm extends ModalComponent
         User::where('id', $this->user_id)->update([
             'name' => $validated_data['name'],
             'email' => $validated_data['email'],
-            'password' => Hash::make($validated_data['password']),
             'phone' => $validated_data['phone'],
             'role' => $validated_data['role']
         ]);
@@ -112,7 +109,7 @@ class UserForm extends ModalComponent
 
     public function show_password()
     {
-        $this->input_password_type = ($this->input_password_type == 'text') ? 'password' : 'text';
+        $this->password_input_type = ($this->password_input_type == 'text') ? 'password' : 'text';
     }
 
     public function close()
