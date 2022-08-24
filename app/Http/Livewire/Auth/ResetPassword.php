@@ -28,12 +28,14 @@ class ResetPassword extends Component
         'password' => 'required|min:6|same:passwordConfirmation'
     ];  
 
-    public function mount($id) {
+    public function mount($id) 
+    {
         $existingUser = User::find($id);
         $this->urlID = intval($existingUser->id);
     }
 
-    public function resetPassword() {
+    public function resetPassword() 
+    {
         $this->validate();
         $existingUser = User::where('email', $this->email)->first();
         if($existingUser && $existingUser->id == $this->urlID) { 

@@ -2,16 +2,16 @@
 
     <br>
     <div class="row">
-
         <div class="col-12">
             <div class="card mb-4 mx-4">
+
                 <div class="card-header pb-0">
                     <div class="d-flex flex-row justify-content-between">
                         <div>
                             <h2 class="mb-0 font-weight-bolder opacity-4">USERS</h2>
                         </div>
                         <button class="btn bg-gradient-info btn-sm mb-0" onclick="Livewire.emit('openModal', 'users.user-form', {{ json_encode(['user_id' => null, 'mode' => 'create']) }} )">+&nbsp; New User</button>
-                    </div>
+                    </div> <!-- /. div d-flex flex-row justify-content-between -->
                     <br>
                     <div class="d-flex flex-row justify-content">
                         <div class="col-md-1">
@@ -24,9 +24,11 @@
                         <div class="col-md-11">
                             <input type="text" class="form-control" placeholder="search user by name or email..." wire:model="search">
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- /. div d-flex flex-row justify-content -->
+                </div> <!-- /. div card-header pb-0 -->
+
                 <br> <hr> <br>
+
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0">
@@ -105,25 +107,28 @@
                                 @endif
                             </tbody>
                         </table>
-                    </div>
-                </div>
+                    </div> <!-- /. div table-responsive p-0 -->
+                </div> <!-- /. div card-body px-0 pt-0 pb-2 -->
+
+                <br>
                 <div class="card-footer">
-                    <br>
                     @if ( $users->count() )
                         {{ $users->links() }}
                     @else
                         <p>There isn't results searching "{{ $search }}" in the page {{ $page }} showing {{ $per_page }} per page...</p>
                     @endif
-                </div>
+                </div> <!-- /. div card-footer -->
+
                 <div wire:loading.table>
                     <div class="d-flex align-items-center ms-5 me-5 mb-3">
                         <strong>Loading...</strong>
                         <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> <!-- /. div wire.loading.table -->
+
+            </div> <!-- /. div card mb-4 mx-4 -->
+        </div> <!-- /. div col-12 -->
+    </div> <!-- /. div row -->
 
     
 

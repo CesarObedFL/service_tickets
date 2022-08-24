@@ -1,4 +1,5 @@
 <main class="main-content">
+
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-12">
@@ -8,7 +9,7 @@
                             <div>
                                 <h2 class="mb-0 font-weight-bolder opacity-4">LIST OF TICKETS</h2>
                             </div>
-                        </div>
+                        </div> <!-- /. div d-flex flex-row justify-content-between -->
                         <br>
                         <div class="d-flex flex-row justify-content">
                             <div class="col-md-1">
@@ -17,7 +18,7 @@
                                     <option value="25">25 per page</option>
                                     <option value="50">50 per page</option>
                                 </select>
-                            </div>
+                            </div> <!-- /. div col-md-1 -->
                             <div class="col-md-1">
                                 <select class="custom-select" wire:model="status">
                                     <option value="all">All Status</option>
@@ -25,7 +26,7 @@
                                     <option value="in process">In Process</option>
                                     <option value="pending">Pending</option>
                                 </select>
-                            </div>
+                            </div> <!-- /. div col-md-1 -->
                             <div class="col-md-1">
                                 <select class="custom-select" wire:model="priority">
                                     <option value="all">All Priorities</option>
@@ -33,13 +34,15 @@
                                     <option value="medium">Medium</option>
                                     <option value="low">Low</option>
                                 </select>
-                            </div>
+                            </div> <!-- /. div col-md-1 -->
                             <div class="col-md-9">
                                 <input type="text" class="form-control" placeholder="search ticket by author or problem..." wire:model="search">
-                            </div>
-                        </div>
-                    </div>
+                            </div> <!-- /. div col-md-9 -->
+                        </div> <!-- /. div d-flex flex-row justify-content -->
+                    </div> <!-- /. div card-header pb-0 -->
+
                     <br> <hr> <br>
+
                     <div class="card-body px-0 pt-0 pb-2">
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
@@ -132,8 +135,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
+                        </div> <!-- /. div table-responsive p-0 -->
+                    </div> <!-- /. div card-body px-0 pt-0 pb-2 -->
+
                     <div class="card-footer">
                         <br>
                         @if ( $tickets->count() )
@@ -141,15 +145,18 @@
                         @else
                             <p>There isn't results searching "{{ $search }}" in the page {{ $page }} showing {{ $per_page }} per page...</p>
                         @endif
-                    </div>
+                    </div> <!-- /. div card-footer -->
+
                     <div wire:loading.table>
                         <div class="d-flex align-items-center ms-5 me-5 mb-3">
                             <strong>Loading...</strong>
                             <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div> <!-- /. div wire:loading.table -->
+
+                </div> <!-- /. div card mb-4 -->
+            </div> <!-- /. div col-12 -->
+        </div> <!-- /. div row -->
+    </div> <!-- /. div container-fluid py-4 -->
+
 </main>

@@ -56,6 +56,6 @@
             <div class="w-100 text-center">
 
             </div>
-        </div>
-    </div>
+        </div> <!-- /. div card-body pt-sm-3 pt-0 -->
+    </div> <!-- /. div card shadow-lg  -->
 </div>

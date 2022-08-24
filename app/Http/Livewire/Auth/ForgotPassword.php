@@ -23,17 +23,20 @@ class ForgotPassword extends Component
         'email' => 'required|email',
     ];  
 
-    public function mount() {
-        if(auth()->user()){
+    public function mount() 
+    {
+        if(auth()->user()) {
             redirect('/dashboard');
         }
     }
 
-    public function routeNotificationForMail() {
+    public function routeNotificationForMail() 
+    {
         return $this->email;
     }
 
-    public function recoverPassword() { 
+    public function recoverPassword() 
+    { 
         if(env('IS_DEMO')) {
             $this->showDemoNotification = true;
         } else {

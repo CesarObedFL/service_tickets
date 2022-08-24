@@ -1,9 +1,13 @@
 <div class="main-content">
+
     <div class="container">
         <div class="row">
             <div class="card z-index-0">
+
                 <h3 class="card-header font-weight-bolder text-uppercase opacity-4">reset password</h3>
+
                 <hr>
+
                 <div class="card-body">
                     <form wire:submit.prevent="store" action="#" method="POST" role="form text-left">
 
@@ -23,16 +27,18 @@
                             @error('confirm_password') <div class="text-danger">{{ $message }}</div> @enderror
                         </div>
 
-                        <div class="text-center row">
+                        <div class="text-center row"> <!-- action buttons -->
                             <div class="col-md-6">
                                 <button type="button" wire:click="close" class="btn bg-gradient-danger w-100 my-4 mb-2">cancel</button>
                             </div>
                             <div class="col-md-6">
                                 <button type="submit" class="btn bg-gradient-success w-100 my-4 mb-2">update</button>
                             </div>
-                        </div>
+                        </div> <!-- /. div action buttons -->
+
                     </form>
-                </div>
+                </div> <!-- /. div card-body -->
+
                 <div class="card-footer">
                     <div wire:loading wire:target="store">
                         <div class="d-flex align-items-center ms-5 me-5 mb-3">
@@ -40,9 +46,11 @@
                             <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> <!-- /. div card-footer -->
+
+            </div> <!-- /. div card z-index-0 -->
+        </div> <!-- /. div row -->
+    </div> <!-- /. div container -->
+
 </div>
 

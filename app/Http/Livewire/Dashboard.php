@@ -8,6 +8,7 @@ use App\Models\Ticket;
 class Dashboard extends Component
 {
 
+    // statistics array variables of the dashboard
     public $ticket_statistics = [ 
         'total_tickets' => 0,
         'solved_tickets' => 0, 'solved_tickets_percent' => 0,
@@ -15,6 +16,7 @@ class Dashboard extends Component
         'in_process_tickets' => 0, 'in_process_tickets_percent' => 0
     ];
 
+    // calculates the variables
     public function mount()
     {
         $this->ticket_statistics['total_tickets'] = Ticket::count();

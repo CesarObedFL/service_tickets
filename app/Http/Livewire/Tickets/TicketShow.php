@@ -18,13 +18,16 @@ class TicketShow extends Component
 
     public function mount( $id )
     {
+        // if user's role is admin or support, shows every ticket
         if( auth()->user()->role == 'admin' || auth()->user()->role == 'support' ) {
             $this->ticket = Ticket::with('notifications')->where('id', $id)->first();
 
+        // if not, user only can see his own tickets
         } else {
             $this->ticket = Ticket::with('notifications')->where('id', $id)->where('user_id', auth()->user()->id)->first();
         }
         
+        // change ticket's notification 'is_read' status to true
         foreach( $this->ticket->notifications as $notification ) {
             $notification->is_read = true;
             $notification->save();

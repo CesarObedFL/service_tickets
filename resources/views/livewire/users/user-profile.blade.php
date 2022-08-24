@@ -1,4 +1,5 @@
 <div>
+
     <div class="container-fluid">
         <div class="page-header min-height-200 border-radius-xl mt-4"
             style="background-image: url('../assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
@@ -14,8 +15,8 @@
                         <p class="mb-0 font-weight-bold text-sm">
                             {{ $user->role }}
                         </p>
-                    </div>
-                </div>
+                    </div> <!-- /. div h-100 -->
+                </div> <!-- /. div col-auto my-auto -->
                 <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
                     <div class="nav-wrapper position-relative end-0">
                         <ul class="nav nav-fill p-1 bg-transparent">
@@ -29,12 +30,12 @@
                                     <span class="ms-1">{{ __('Password') }}</span>
                                 </a>
                             </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        </ul> <!-- /. div nav nav-fill p-1 bg-transparent  -->
+                    </div> <!-- /. div nav-wrapper position-relative end-0 -->
+                </div> <!-- /. div col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3 -->
+            </div> <!-- /. div row -->
+        </div> <!-- /. div card card-body -->
+    </div> <!-- /. div container-fluid -->
 
     <div class="container-fluid py-4">
         <div class="card">
@@ -42,7 +43,6 @@
                 <h6 class="mb-0">{{ __('Profile Information') }}</h6>
             </div>
             <div class="card-body pt-4 p-3">
-
 
                 <form wire:submit.prevent="save" action="#" method="POST" role="form text-left">
 
@@ -82,7 +82,8 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
+            </div> <!-- /. div card-body pt-4 p-3 -->
+        </div> <!-- /. div card -->
+    </div> <!-- /. div container-fluid py-4 -->
+    
 </div>

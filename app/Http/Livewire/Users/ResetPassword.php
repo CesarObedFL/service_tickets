@@ -44,11 +44,10 @@ class ResetPassword extends ModalComponent
                     $validator->errors()->add('confirm_password', 'passwords doesn\'t match...');
                 }
             });
-        })->validate();   
-        //$this->validate();     
+        })->validate();    
         
         User::where('id', $this->user_id)->update([
-            'password' => Hash::make($this->password),
+            'password' => Hash::make( $this->password ),
         ]);
 
         $this->close();

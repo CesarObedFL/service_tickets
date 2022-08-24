@@ -15,14 +15,16 @@ class Login extends Component
         'password' => 'required',
     ];
 
-    public function mount() {
-        if(auth()->user()){
+    public function mount() 
+    {
+        if(auth()->user()) {
             redirect('/user-profile');
         }
-        $this->fill(['email' => 'sistemas@carbono6.mx', 'password' => 'secret']);
+        //$this->fill(['email' => 'sistemas@carbono6.mx', 'password' => 'secret']);
     }
 
-    public function login() {
+    public function login() 
+    {
         $credentials = $this->validate();
         if(auth()->attempt(['email' => $this->email, 'password' => $this->password])) {
             $user = User::where(["email" => $this->email])->first();

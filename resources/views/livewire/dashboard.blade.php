@@ -12,17 +12,17 @@
                     <h5 class="font-weight-bolder mb-0">
                       {{ $ticket_statistics['total_tickets'] }}
                     </h5>
-                  </div>
-                </div>
+                  </div> <!-- /. div numbers -->
+                </div> <!-- /. div col-8 -->
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
                     <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div> <!-- /. div col-4 -->
+              </div> <!-- /. div row -->
+            </div> <!-- /. div card-body -->
+          </div> <!-- /. div card -->
+        </div> <!-- /. div col-xl-3 col-sm-6 -->
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
@@ -34,17 +34,17 @@
                       {{ $ticket_statistics['solved_tickets'] }}
                       <span class="text-success text-sm font-weight-bolder">{{ $ticket_statistics['solved_tickets_percent'] . '%' }}</span>
                     </h5>
-                  </div>
-                </div>
+                  </div> <!-- /. div numbers -->
+                </div> <!-- /. div col-8 -->
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
                     <i class="fas fa-check-double text-lg opacity-10" aria-hidden="true"></i>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div> <!-- /. div col-4 -->
+              </div> <!-- /. div row -->
+            </div> <!-- /. div card-body -->
+          </div> <!-- /. div card -->
+        </div> <!-- /. div col-xl-3 col-sm-6 -->
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
@@ -56,17 +56,17 @@
                       {{ $ticket_statistics['pending_tickets'] }}
                       <span class="text-danger text-sm font-weight-bolder">{{ $ticket_statistics['pending_tickets_percent'] . '%' }}</span>
                     </h5>
-                  </div>
-                </div>
+                  </div> <!-- /. div numbers -->
+                </div> <!-- /. div col-8 -->
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
                     <i class="fas fa-times-circle text-lg opacity-10" aria-hidden="true"></i>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div> <!-- /. div col-4 -->
+              </div> <!-- /. div row -->
+            </div> <!-- /. div card-body -->
+          </div> <!-- /. div card -->
+        </div> <!-- /. div col-xl-3 col-sm-6 -->
         <div class="col-xl-3 col-sm-6">
           <div class="card">
             <div class="card-body p-3">
@@ -78,18 +78,18 @@
                       {{ $ticket_statistics['in_process_tickets'] }}
                       <span class="text-info text-sm font-weight-bolder">{{ $ticket_statistics['in_process_tickets_percent'] . '%' }}</span>
                     </h5>
-                  </div>
-                </div>
+                  </div> <!-- /. div numbers -->
+                </div> <!-- /. div col-8 -->
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
                     <i class="fas fa-edit text-lg opacity-10" aria-hidden="true"></i>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                </div> <!-- /. div col-4 -->
+              </div> <!-- /. div row -->
+            </div> <!-- /. div card-body -->
+          </div> <!-- /. div card -->
+        </div> <!-- /. div col-xl-3 col-sm-6 -->
+      </div> <!-- /. div row -->
 
       <div class="row mt-4">
         <div class="col-lg-5 mb-lg-0 mb-4">
@@ -225,7 +225,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> <!-- /. div container-fluid py-4 -->
   </main>
 
   <!--   Core JS Files   -->

@@ -1,4 +1,5 @@
 <section class="h-100-vh mb-8">
+
     <div class="page-header align-items-start section-height-50 pt-5 pb-11 m-3 border-radius-lg"
         style="background-image: url('../assets/img/curved-images/curved14.jpg');">
         <span class="mask bg-gradient-dark opacity-6"></span>
@@ -8,8 +9,9 @@
                     <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> <!-- /. div container -->
+    </div> <!-- /. div -->
+
     <div class="container">
         <div class="row mt-lg-n10 mt-md-n11 mt-n10">
             <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
@@ -19,7 +21,7 @@
                         <p class="text-lead">
                             {{ __('Use these form to create a new account') }}
                         </p>
-                    </div>
+                    </div> <!-- /. div card-header text-center pt-4 -->
                     <div class="card-body">
 
                         <form wire:submit.prevent="register" action="#" method="POST" role="form text-left">
@@ -53,9 +55,10 @@
                             </p>
                         </form>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div> <!-- /. div card-body -->
+                </div> <!-- /. div card z-index-0 -->
+            </div> <!-- /. div col-xl-4 col-lg-5 col-md-7 mx-auto -->
+        </div> <!-- /. div row mt-lg-n10 mt-md-n11 mt-n10 -->
+    </div> <!-- /. div container -->
+
 </section>

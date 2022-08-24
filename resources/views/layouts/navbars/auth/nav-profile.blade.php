@@ -110,7 +110,7 @@
                                                 </g>
                                             </g>
                                         </svg>
-                                    </div>
+                                    </div> <!-- /. div avatar avatar-sm bg-gradient-secondary me-3 my-auto -->
                                     <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal mb-1">
                                             Payment successfully completed
@@ -119,14 +119,14 @@
                                             <i class="fa fa-clock me-1"></i>
                                             2 days
                                         </p>
-                                    </div>
-                                </div>
+                                    </div> <!-- /. div d-flex flex-column justify-content-center -->
+                                </div> <!-- /. div d-flex py-1 -->
                             </a>
                         </li>
                     </ul>
                 </li>
             </ul>
-        </div>
-    </div>
+        </div> <!-- /. div collapse navbar-collapse me-md-0 me-sm-4 mt-sm-0 mt-2 -->
+    </div> <!-- /. div container-fluid py-1 -->
 </nav>
 

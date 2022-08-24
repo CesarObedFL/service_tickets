@@ -54,15 +54,15 @@
                                                 <i class="fa fa-clock me-1"></i>
                                                 {{ $notification->created_at }}
                                             </p>
-                                        </div>
-                                    </div>
+                                        </div> <!-- /. div "d-flex flex-column justify-content-center -->
+                                    </div> <!-- /. div d-flex py-1 -->
                                 </a>
                             </li>
                             @endforeach
                         </ul>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </div> <!-- /. div collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 d-flex justify-content-end -->
+        </div> <!-- /. div container-fluid py-1 px-3 -->
     </nav>
 

@@ -8,7 +8,7 @@
                         <div class="card-header pb-0 text-left bg-transparent">
                             <p class="mb-0">{{ __('Forgot your password? Enter your email and new password here') }}
                             <p>
-                        </div>
+                        </div> <!-- /. div card-header pb-0 text-left bg-transparent -->
                         <div class="card-body">
 
                             <form wire:submit.prevent="resetPassword" action="#" method="POST" role="form text-left">
@@ -68,16 +68,19 @@
                                     </button>
                                 </div>
                             @endif
-                        </div>
-                    </div>
-                </div>
+
+                        </div> <!-- /. div card-body -->
+                    </div> <!-- /. div card card-plain mt-8 -->
+                </div> <!-- /. div col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto -->
+
                 <div class="col-md-6">
                     <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
                         <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
                             style="background-image:url('../assets/img/curved-images/curved6.jpg')"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> <!-- /. div col-md-6 -->
+
+            </div> <!-- /. div row -->
+        </div> <!-- /. div container -->
+    </div> <!-- /. div page-header section-height-75 -->
 </div>

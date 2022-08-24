@@ -5,7 +5,7 @@
             <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="...">
             <span class="ms-3 font-weight-bold">Service Tickets</span>
         </a>
-    </div>
+    </div> <!-- /. div sidenav-header -->
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
@@ -63,5 +63,5 @@
             </li>
             @endif
         </ul>
-    </div>
+    </div> <!-- /. div collapse navbar-collapse w-auto -->
 </aside>

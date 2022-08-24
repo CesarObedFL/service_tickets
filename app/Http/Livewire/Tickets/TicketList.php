@@ -14,7 +14,7 @@ class TicketList extends Component
 
     protected $paginationTheme = 'bootstrap';
 
-    protected $listeners = [ 'asigned_user' => 'render' , 'confirmed' => 'send_notification' ];
+    protected $listeners = [ 'asigned_user' => 'render' , 'confirmed' => 'create_notification' ];
 
     protected $queryString = [ 'search' => [ 'except' => '' ], 'status' => [ 'except' => 'all' ], 'priority' => [ 'except' => 'all' ], 'per_page' ];
 
@@ -80,7 +80,7 @@ class TicketList extends Component
         } else if( $ticket->status == 'in process' ) {
             $ticket->status = 'solved';
             $ticket->save();
-            $this->alert('question', 'The ticket has been solved...   Do you want to notificate to the user?', [
+            $this->alert('question', 'The ticket has been solved...   Do you want to notify the user?', [
                 'showConfirmButton' => true,
                 'showDenyButton' => true,
                 'confirmButtonText' => 'Yes',
@@ -100,7 +100,7 @@ class TicketList extends Component
         
     }
 
-    public function send_notification()
+    public function create_notification()
     {
         Notification::create([
             'type' => 'action', 

@@ -57,14 +57,7 @@ class UserForm extends ModalComponent
             'password' => 'required',
             'phone' => 'required|min:10',
             'role' => 'required'
-        ]/*, [
-            'name.required' => 'El campo de Nombre es requerido...',
-            'email.required' => 'El campo de Email es requerido...',
-            'email.email' => 'El campo debe ser un correo valido...',
-            'password.required' => 'El campo de Contraseña es requerido...',
-            'phone.required' => 'El campo de Teléfono es requerido...',
-            'role.required' => 'El campo de rol es requerido...'
-        ]*/);
+        ]);
 
         User::create([
             'name' => $validated_data['name'],
@@ -86,14 +79,7 @@ class UserForm extends ModalComponent
             'email' => 'required|email:rfc,dns',
             'phone' => 'required|min:10',
             'role' => 'required'
-        ]/*, [
-            'name.required' => 'El campo de Nombre es requerido...',
-            'email.required' => 'El campo de Email es requerido...',
-            'email.email' => 'El campo debe ser un correo valido...',
-            'password.required' => 'El campo de Contraseña es requerido...',
-            'phone.required' => 'El campo de Teléfono es requerido...',
-            'role.required' => 'El campo de rol es requerido...'
-        ]*/);
+        ]);
 
         User::where('id', $this->user_id)->update([
             'name' => $validated_data['name'],

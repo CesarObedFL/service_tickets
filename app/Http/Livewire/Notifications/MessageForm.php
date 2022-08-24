@@ -21,9 +21,11 @@ class MessageForm extends ModalComponent
 
     public function mount( $ticket_id )
     {
+        // if the message will be create by admin or user, it's 'is_read' flag is set in false
         if( auth()->user()->role == 'admin' || auth()->user()->role == 'support' ) {
             $this->message_readed_by_user = false;
 
+        // if the message will be create by user, it's 'is_read' flad is set in true
         } else {
             $this->message_readed_by_user = true;
         }
@@ -50,6 +52,7 @@ class MessageForm extends ModalComponent
             'ticket_id' => $this->ticket_id
         ]);
 
+        // images store
         foreach( $this->files as $file ) {
             $image_path = $file->storeAs('public\images\ticket_'.$this->ticket_id.'\notification_'.$notification->id, $file->getClientOriginalName());
             Image::create([
