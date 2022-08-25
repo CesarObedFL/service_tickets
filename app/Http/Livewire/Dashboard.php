@@ -24,9 +24,9 @@ class Dashboard extends Component
         $this->ticket_statistics['pending_tickets'] = Ticket::where('status', 'pending')->count();
         $this->ticket_statistics['in_process_tickets'] = Ticket::where('status', 'in process')->count();
 
-        $this->ticket_statistics['solved_tickets_percent'] = ($this->ticket_statistics['solved_tickets'] * 100) /  $this->ticket_statistics['total_tickets'];
-        $this->ticket_statistics['pending_tickets_percent'] = ($this->ticket_statistics['pending_tickets'] * 100) /  $this->ticket_statistics['total_tickets'];
-        $this->ticket_statistics['in_process_tickets_percent'] = ($this->ticket_statistics['in_process_tickets'] * 100) /  $this->ticket_statistics['total_tickets'];
+        $this->ticket_statistics['solved_tickets_percent'] = ($this->ticket_statistics['solved_tickets'] * 100) /  (( $this->ticket_statistics['total_tickets'] > 0 ) ? $this->ticket_statistics['total_tickets'] : 1);
+        $this->ticket_statistics['pending_tickets_percent'] = ($this->ticket_statistics['pending_tickets'] * 100) / (( $this->ticket_statistics['total_tickets'] > 0 ) ? $this->ticket_statistics['total_tickets'] : 1);
+        $this->ticket_statistics['in_process_tickets_percent'] = ($this->ticket_statistics['in_process_tickets'] * 100) / (( $this->ticket_statistics['total_tickets'] > 0 ) ? $this->ticket_statistics['total_tickets'] : 1);
     }
 
     public function render()
