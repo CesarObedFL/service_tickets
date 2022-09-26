@@ -26,6 +26,11 @@ class TicketList extends Component
     public $status = 'all';
     public $ticket_id = '';
 
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
         $_status = $this->status;

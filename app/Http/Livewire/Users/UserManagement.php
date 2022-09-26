@@ -22,6 +22,11 @@ class UserManagement extends Component
     public $order_by = 'id';
     public $sort_direction = 'asc';
 
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
         return view('livewire.users.user-management', [ 
