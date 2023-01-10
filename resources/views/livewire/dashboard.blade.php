@@ -161,7 +161,7 @@
             },
             ticks: {
               suggestedMin: 0,
-              suggestedMax: 100,
+              suggestedMax: 30,
               beginAtZero: true,
               padding: 0,
               fontSize: 14,
@@ -266,7 +266,7 @@
             },
             ticks: {
               suggestedMin: 0,
-              suggestedMax: 40,
+              suggestedMax: 30,
               beginAtZero: true,
               padding: 10,
               fontSize: 11,
