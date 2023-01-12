@@ -20,7 +20,7 @@ class TicketList extends Component
 
     public $per_page = 10;
     public $order_by = 'created_at';
-    public $sort_direction = 'asc';
+    public $sort_direction = 'desc';
     public $search = '';
     public $priority = 'all';
     public $status = 'all';
