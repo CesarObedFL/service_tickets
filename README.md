@@ -37,6 +37,7 @@ the problems that can be registered are open to the needs of the company
 
 - php ^8.0
 - composer ^2.2.4 
+- Calendar PHP library (php81-calendar)
 
 ## _install_
 

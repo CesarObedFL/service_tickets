@@ -1,11 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "laravel/service_tickets",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "A project of tickets using the Laravel Framework",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.4",
         "jantinnerezo/livewire-alert": "^2.2",
