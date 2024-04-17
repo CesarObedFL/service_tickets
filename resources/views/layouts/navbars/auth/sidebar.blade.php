@@ -2,7 +2,8 @@
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <a class="align-items-center d-flex m-0 navbar-brand text-wrap" href="{{ route('my-tickets') }}">
-            <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="...">
+            <!-- <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="..."> -->
+            <img src="../assets/app/images/service_tickets_black_circled_logo.png" class="navbar-brand-img h-100" alt="Service Tickets">
             <span class="ms-3 font-weight-bold">Service Tickets</span>
         </a>
     </div> <!-- /. div sidenav-header -->
