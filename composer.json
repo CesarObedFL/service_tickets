@@ -5,20 +5,20 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.4",
-        "jantinnerezo/livewire-alert": "^2.2",
-        "laravel/framework": "^10.0",
-        "laravel/tinker": "^2.6",
-        "livewire/livewire": "^2.8",
-        "wire-elements/modal": "^1.0"
+        "jantinnerezo/livewire-alert": "^3.0.2",
+        "laravel/framework": "^11.0",
+        "laravel/tinker": "^2.8",
+        "livewire/livewire": "^3.4.11",
+        "wire-elements/modal": "^2.0.9"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^2.0",
         "fakerphp/faker": "^1.17",
-        "laravel/sail": "^1.12",
+        "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^7.0",
+        "nunomaduro/collision": "^8.1",
         "phpunit/phpunit": "^10.0"
     },
     "autoload": {
