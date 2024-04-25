@@ -22,7 +22,7 @@ the problems that can be registered are open to the needs of the company
     <a href="https://mariadb.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="mariadb" width="40" height="40"/> </a> 
 </p>
 
-- [Laravel] - Laravel 9 as backend technology 
+- [Laravel] - Laravel 11 as backend technology 
 - [Livewire] - Livewire as frontend technology
 - [AlpineJS] - It's used by livewire for _UX_
 - [Bootstrap] - Bootstrap v5 as responsive design framework _UI_
@@ -35,7 +35,7 @@ the problems that can be registered are open to the needs of the company
 
 ## _requeriments_
 
-- php ^8.0
+- php ^8.2
 - composer ^2.2.4 
 - Calendar PHP library (php81-calendar)
 
