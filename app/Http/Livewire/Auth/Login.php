@@ -20,7 +20,6 @@ class Login extends Component
         if(auth()->user()) {
             redirect('/user-profile');
         }
-        //$this->fill(['email' => 'sistemas@carbono6.mx', 'password' => 'secret']);
     }
 
     public function login() 

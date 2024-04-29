@@ -23,6 +23,7 @@
 
                         <div class="card-body">
                             <form wire:submit.prevent="recoverPassword" action="#" method="POST" role="form text-left">
+                                @csrf
                                 <div>
                                     <label for="email">{{ __('Email') }}</label>
                                     <div class="@error('email')border border-danger rounded-3 @enderror">

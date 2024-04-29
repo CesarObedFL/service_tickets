@@ -11,6 +11,7 @@
                         </div> <!-- /. div card-header pb-0 text-center bg-transparent -->
                         <div class="card-body">
                             <form wire:submit.prevent="login" action="#" method="POST" role="form text-left">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="email">{{ __('Email') }}</label>
                                     <div class="@error('email')border border-danger rounded-3 @enderror">
