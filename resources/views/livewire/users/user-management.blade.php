@@ -16,14 +16,14 @@
                     <div class="d-flex flex-row justify-content">
                         <div class="col-md-1">
                             <!-- <select class="custom-select" wire:model="per_page"> -->
-                            <select class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white" wire:model="per_page">
+                            <select wire:model.live="per_page" class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white">
                                 <option value="10">10 per page</option>
                                 <option value="25">25 per page</option>
                                 <option value="50">50 per page</option>
                             </select>
                         </div>
                         <div class="col-md-11">
-                            <input type="text" class="form-control" placeholder="search user by name or email..." wire:model="search">
+                            <input wire:model.live="search" type="text" class="form-control" placeholder="search user by name or email...">
                         </div>
                     </div> <!-- /. div d-flex flex-row justify-content -->
                 </div> <!-- /. div card-header pb-0 -->
@@ -35,35 +35,35 @@
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('id')"> ID 
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('id')"> ID 
                                         @if ( $order_by == 'id' )
                                             @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                         @else 
                                             <i class="fas fa-sort float-right mt-1"></i>
                                         @endif
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('name')"> Name 
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('name')"> Name 
                                         @if ( $order_by == 'name' )
                                             @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                         @else 
                                             <i class="fas fa-sort float-right mt-1"></i>
                                         @endif
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('email')"> Email 
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('email')"> Email 
                                         @if ( $order_by == 'email' )
                                             @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                         @else 
                                             <i class="fas fa-sort float-right mt-1"></i>
                                         @endif
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('role')"> Role 
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('role')"> Role 
                                         @if ( $order_by == 'role' )
                                             @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                         @else 
                                             <i class="fas fa-sort float-right mt-1"></i>
                                         @endif
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('status')"> Status 
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('status')"> Status 
                                         @if ( $order_by == 'status' )
                                             @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                         @else 

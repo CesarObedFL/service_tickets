@@ -13,10 +13,18 @@ class UserManagement extends Component
 
     protected $paginationTheme = 'bootstrap';
 
-    protected $listeners = [ 'user_added' => 'render', 'user_updated' => 'render' ];
+    protected $listeners = [ 
+        'user_added' => 'render', 
+        'user_updated' => 'render' 
+    ];
 
-    protected $queryString = [ 'search' => [ 'except' => ''], 'per_page' ];
+    protected $queryString = [ 
+        'search' => [ 'except' => '' ], 
+        'page' => [ 'except' => 1 ], 
+        'per_page' 
+    ];
 
+    public $page;
     public $search = '';
     public $per_page = 10;
     public $order_by = 'id';
@@ -38,7 +46,7 @@ class UserManagement extends Component
                                                     ]);
     }
 
-    public function order_by( $order_by_parameter )
+    public function order( $order_by_parameter )
     {
         if ( $this->order_by == $order_by_parameter ) {
             $this->sort_direction = ( $this->sort_direction == 'asc' ) ? 'desc' : 'asc';
