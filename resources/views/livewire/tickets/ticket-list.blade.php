@@ -15,9 +15,9 @@
                             <div class="col-md-1">
                                 <!-- <select class="custom-select" wire:model="per_page"> -->
                                 <select wire:model.live="per_page" class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white">
-                                    <option value="1">10 per page</option>
-                                    <option value="2">25 per page</option>
-                                    <option value="5">50 per page</option>
+                                    <option value="10">10 per page</option>
+                                    <option value="25">25 per page</option>
+                                    <option value="50">50 per page</option>
                                 </select>
                             </div> <!-- /. div col-md-1 -->
                             <div class="col-md-1">
