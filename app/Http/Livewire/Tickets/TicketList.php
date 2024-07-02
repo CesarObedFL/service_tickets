@@ -14,10 +14,21 @@ class TicketList extends Component
 
     protected $paginationTheme = 'bootstrap';
 
-    protected $listeners = [ 'asigned_user' => 'render' , 'confirmed' => 'create_notification' ];
+    protected $listeners = [ 
+        'asigned_user' => 'render' , 
+        'confirmed' => 'create_notification' 
+    ];
 
-    protected $queryString = [ 'search' => [ 'except' => '' ], 'status' => [ 'except' => 'all' ], 'priority' => [ 'except' => 'all' ], 'per_page' ];
+    protected $queryString = [ 
+        'search' => [ 'except' => '' ], 
+        'page' => [ 'except' => 1 ],
+        'status' => [ 'except' => 'all' ], 
+        'priority' => [ 'except' => 'all' ], 
+        'per_page' 
+    ];
 
+
+    public $page;
     public $per_page = 10;
     public $order_by = 'created_at';
     public $sort_direction = 'desc';
