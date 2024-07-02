@@ -53,21 +53,21 @@
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author
                                         </th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" role="button" wire:click="order_by('problem')">Problem
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" role="button" wire:click="order('problem')">Problem
                                             @if ( $order_by == 'problem' )
                                                 @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                             @else 
                                                 <i class="fas fa-sort float-right mt-1"></i>
                                             @endif
                                         </th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('created_at')">Created at
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('created_at')">Created at
                                             @if ( $order_by == 'created_at' )
                                                 @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                             @else 
                                                 <i class="fas fa-sort float-right mt-1"></i>
                                             @endif
                                         </th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order_by('asigned_to')">Asigned To
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" role="button" wire:click="order('asigned_to')">Asigned To
                                             @if ( $order_by == 'asigned_to' )
                                                 @if ( $sort_direction == 'asc' ) <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i> @else <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i> @endif
                                             @else 

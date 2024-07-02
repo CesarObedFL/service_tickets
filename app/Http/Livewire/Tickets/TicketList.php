@@ -73,7 +73,7 @@ class TicketList extends Component
                                                     ]);
     }
 
-    public function order_by( $order_by_parameter )
+    public function order( $order_by_parameter )
     {
         if( $this->order_by == $order_by_parameter ) {
             $this->sort_direction = ( $this->sort_direction == 'asc' ) ? 'desc' : 'asc';
