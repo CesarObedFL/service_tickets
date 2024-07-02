@@ -39,7 +39,7 @@
                                 </select>
                             </div> <!-- /. div col-md-1 -->
                             <div class="col-md-9">
-                                <input type="text" class="form-control" placeholder="search ticket by author or problem..." wire:model="search">
+                                <input wire:model.live="search" type="text" class="form-control" placeholder="search ticket by author or problem...">
                             </div> <!-- /. div col-md-9 -->
                         </div> <!-- /. div d-flex flex-row justify-content -->
                     </div> <!-- /. div card-header pb-0 -->
