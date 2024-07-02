@@ -67,7 +67,7 @@ class UserForm extends ModalComponent
             'role' => $validated_data['role']
         ]);
 
-        $this->emit('user_added');
+        $this->dispatch('user_added');
         $this->close();
         $this->alert('success', 'User created successfully!...', [ 'position' => 'center', 'timer' => 2500 ]);
     }
@@ -88,7 +88,7 @@ class UserForm extends ModalComponent
             'role' => $validated_data['role']
         ]);
 
-        $this->emit('user_updated');
+        $this->dispatch('user_updated');
         $this->close();
         $this->alert('success', 'User updated successfully!...', [ 'position' => 'center', 'timer' => 2500 ]);
     }

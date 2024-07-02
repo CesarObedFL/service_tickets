@@ -62,7 +62,7 @@ class MessageForm extends ModalComponent
             ]);
         }
 
-        $this->emit('add_notification');
+        $this->dispatch('add_notification');
         $this->close();
         $this->alert('success', 'Message writed successfully!...', [ 'position' => 'center', 'timer' => 2500 ]);
     }

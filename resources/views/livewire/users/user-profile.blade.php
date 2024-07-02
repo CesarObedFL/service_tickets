@@ -26,7 +26,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="mb-0 px-0 py-1" role="button" data-bs-toggle="tooltip" data-bs-original-title="reset password" onclick="Livewire.emit('openModal', 'users.reset-password', {{ json_encode(['user_id' => $user->id]) }} )">
+                                <a class="mb-0 px-0 py-1" role="button" data-bs-toggle="tooltip" data-bs-original-title="reset password" wire:click="$dispatch('openModal', { component: 'users.reset-password', arguments: { user_id: {{ $user->id }} }})">
                                     <span class="ms-1">{{ __('Password') }}</span>
                                 </a>
                             </li>

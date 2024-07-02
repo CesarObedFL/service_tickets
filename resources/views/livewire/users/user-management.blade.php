@@ -10,12 +10,13 @@
                         <div>
                             <h2 class="mb-0 font-weight-bolder opacity-4">USERS</h2>
                         </div>
-                        <button class="btn bg-gradient-info btn-sm mb-0" onclick="Livewire.emit('openModal', 'users.user-form', {{ json_encode(['user_id' => null, 'mode' => 'create']) }} )">+&nbsp; New User</button>
+                        <button class="btn bg-gradient-info btn-sm mb-0" wire:click="$dispatch('openModal', { component: 'users.user-form', arguments: { user_id: {{ 0 }}, mode: 'create' }})">+&nbsp; New User</button>
                     </div> <!-- /. div d-flex flex-row justify-content-between -->
                     <br>
                     <div class="d-flex flex-row justify-content">
                         <div class="col-md-1">
-                            <select class="custom-select" wire:model="per_page">
+                            <!-- <select class="custom-select" wire:model="per_page"> -->
+                            <select class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white" wire:model="per_page">
                                 <option value="10">10 per page</option>
                                 <option value="25">25 per page</option>
                                 <option value="50">50 per page</option>
@@ -92,13 +93,13 @@
                                                 <p class="text-xs font-weight-bold mb-0"> @if( $user->status ) <span class="badge badge-sm bg-gradient-success">{{ __('Active') }}</span> @else <span class="badge badge-sm bg-gradient-danger">{{ __('Inactive') }}</span> @endif </p>
                                             </td>
                                             <td class="text-center">
-                                                <span role="button" data-bs-toggle="tooltip" data-bs-original-title="Edit user" onclick="Livewire.emit('openModal', 'users.user-form', {{ json_encode(['user_id' => $user->id, 'mode' => 'update']) }} )">
+                                                <span role="button" data-bs-toggle="tooltip" data-bs-original-title="Edit user" wire:click="$dispatch('openModal', { component: 'users.user-form', arguments: { user_id: {{ $user->id }}, mode: 'update' }})">
                                                     <i class="fas fa-user-edit text-secondary"></i>
                                                 </span>
                                                 <span role="button" wire:click="change_status({{ $user->id }})" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="@if( $user->status ) Deactivate user @else Activate user @endif">
                                                     <i class="cursor-pointer @if( $user->status ) fas fa-user-times @else fas fa-user-check @endif text-secondary"></i>
                                                 </span>
-                                                <a class="mb-0 px-0 py-1" role="button" data-bs-toggle="tooltip" data-bs-original-title="reset password" onclick="Livewire.emit('openModal', 'users.reset-password', {{ json_encode(['user_id' => $user->id]) }} )">
+                                                <a class="mb-0 px-0 py-1" role="button" data-bs-toggle="tooltip" data-bs-original-title="reset password" wire:click="$dispatch('openModal', { component: 'users.reset-password', arguments: { user_id: {{ $user->id }} }})">
                                                     <span class="ms-1 fas fa-key text-secondary"></span>
                                                 </a>
                                             </td>

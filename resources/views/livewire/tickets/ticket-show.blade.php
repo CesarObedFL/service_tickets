@@ -57,7 +57,7 @@
                                     <h2 class="mb-0 font-weight-bolder opacity-4">Messages & Notifications</h2>
                                 </div>
                                 <button class="float-end text-secondary icon-move-right" role="button" data-bs-toggle="tooltip" data-bs-original-title="write a message"
-                                    onclick="Livewire.emit('openModal', 'notifications.message-form', {{ json_encode(['ticket_id' => $ticket->id]) }} )"> 
+                                wire:click="$dispatch('openModal', { component: 'notifications.message-form', arguments: { ticket_id: {{ $ticket->id }} }})"> 
                                     <i class="fas fa-reply"> reply</i> 
                                 </button>
                             </div> <!-- /. div d-flex flex-row justify-content-between -->
@@ -86,7 +86,7 @@
 
                         <div class="card-footer">
                             <button class="float-end text-secondary icon-move-right" role="button" data-bs-toggle="tooltip" data-bs-original-title="write a message"
-                                onclick="Livewire.emit('openModal', 'notifications.message-form', {{ json_encode(['ticket_id' => $ticket->id]) }} )"> 
+                                wire:click="$dispatch('openModal', { component: 'notifications.message-form', arguments: { ticket_id: {{ $ticket->id }} }})"> 
                                 <i class="fas fa-reply"> reply</i> 
                             </button>
                         </div> <!-- /. div card-footer -->

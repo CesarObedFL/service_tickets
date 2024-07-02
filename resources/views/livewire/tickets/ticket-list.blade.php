@@ -13,14 +13,16 @@
                         <br>
                         <div class="d-flex flex-row justify-content">
                             <div class="col-md-1">
-                                <select class="custom-select" wire:model="per_page">
+                                <!-- <select class="custom-select" wire:model="per_page"> -->
+                                <select class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white" wire:model="per_page">
                                     <option value="10">10 per page</option>
                                     <option value="25">25 per page</option>
                                     <option value="50">50 per page</option>
                                 </select>
                             </div> <!-- /. div col-md-1 -->
                             <div class="col-md-1">
-                                <select class="custom-select" wire:model="status">
+                                <!-- <select class="custom-select" wire:model="status"> -->
+                                <select class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white" wire:model="status">
                                     <option value="all">All Status</option>
                                     <option value="solved">Solved</option>
                                     <option value="in process">In Process</option>
@@ -28,7 +30,8 @@
                                 </select>
                             </div> <!-- /. div col-md-1 -->
                             <div class="col-md-1">
-                                <select class="custom-select" wire:model="priority">
+                                <!-- <select class="custom-select" wire:model="priority"> -->
+                                <select class="block w-sm text-sm font-medium transition duration-75 border border-gray-800 rounded-lg h-10 focus:border-blue-600 focus:ring-1 focus:ring-inset focus:ring-blue-600 bg-white" wire:model="priority">
                                     <option value="all">All Priorities</option>
                                     <option value="high">High</option>
                                     <option value="medium">Medium</option>
@@ -126,7 +129,7 @@
                                                 <i class="fa fa-eye"></i>
                                             </a>
                                             &nbsp;
-                                            <button class="text-secondary font-weight-bold text-xs" onclick="Livewire.emit('openModal', 'tickets.ticket-asign', {{ json_encode(['ticket_id' => $ticket->id]) }})"
+                                            <button class="text-secondary font-weight-bold text-xs" wire:click="$dispatch('openModal', { component: 'tickets.ticket-asign', arguments: { ticket_id: {{ $ticket->id }} }})"
                                                 data-bs-toggle="tooltip" data-bs-original-title="asign user to ticket">
                                                 <i class="fas fa-user-plus"></i>
                                             </button>
@@ -143,7 +146,7 @@
                         @if ( $tickets->count() )
                             {{ $tickets->links() }}
                         @else
-                            <p>There isn't results searching "{{ $search }}" in the page {{ $page }} showing {{ $per_page }} per page...</p>
+                            <p>There isn't results searching "{{ $search }}" in the page {{ '$page' }} showing {{ $per_page }} per page...</p>
                         @endif
                     </div> <!-- /. div card-footer -->
 

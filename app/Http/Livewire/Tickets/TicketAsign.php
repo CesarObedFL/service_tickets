@@ -47,7 +47,7 @@ class TicketAsign extends ModalComponent
             'ticket_id' => $this->ticket_id
         ]);
 
-        $this->emit('asigned_user');
+        $this->dispatch('asigned_user');
         $this->close();
         $this->alert('success', 'User asigned to the ticket successfully!...', [ 'position' => 'center', 'timer' => 2500 ]);
     }

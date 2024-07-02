@@ -9,7 +9,7 @@
                             <div>
                                 <h2 class="mb-0 font-weight-bolder opacity-4">MY TICKETS</h2>
                             </div>
-                            <button class="btn bg-gradient-success btn-sm mb-0" onclick="Livewire.emit('openModal', 'tickets.ticket-create')">Create Ticket</button>
+                            <button class="btn bg-gradient-success btn-sm mb-0" onclick="Livewire.dispatch('openModal', { component: 'tickets.ticket-create' })">Create Ticket</button>
                         </div> <!-- /. div d-flex flex-row justify-content-between -->
                     </div> <!-- /. div card-header pb-0 px-3 -->
                     <div class="card-body pt-4 p-3">

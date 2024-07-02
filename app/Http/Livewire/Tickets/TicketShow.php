@@ -59,7 +59,7 @@ class TicketShow extends Component
             'ticket_id' => $this->ticket->id
         ]);
 
-        $this->emit('add_notification');
+        $this->dispatch('add_notification');
         $this->alert('success', 'Ticket status chenged successfully!...', [ 'position' => 'center', 'timer' => 2500 ]);
     }
 }

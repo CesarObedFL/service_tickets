@@ -34,7 +34,7 @@ class TicketCreate extends ModalComponent
             'user_id' => auth()->user()->id
         ]);
 
-        $this->emit('ticket_created');
+        $this->dispatch('ticket_created');
         $this->close();
         $this->alert('success', 'Ticket created successfully!...', [ 'position' => 'center', 'timer' => 2500 ]);
     }
